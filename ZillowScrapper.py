@@ -43,6 +43,7 @@ class ZillowScraper:
         self.NextPage = True
 
         self.result_list = []
+        self.n_listings = None  # None for all listings
 
         init_msg = f'Attempting to Scrape {self.city}'.upper()
         print(init_msg.center(200, '='), end="\n")
@@ -99,6 +100,7 @@ class ZillowScraper:
                 class_='photo-cards photo-cards_wow photo-cards_short photo-cards_extra-attribution')
 
             if properties:
+                i = 1
                 for house in properties.contents:
                     primary_data = house.find('script', {'type': 'application/ld+json'})
 
@@ -111,7 +113,10 @@ class ZillowScraper:
                         listed_by = re.sub(r'\([^()]*\)', '',
                                            listing_card.text.replace('Listing by:', '')).strip()
 
-                        yield url, listed_by
+                        if i <= ifnull(self.n_listings, 9999):
+                            i += 1
+                            yield url, listed_by
+
             else:
                 self.NextPage = False
 
@@ -162,14 +167,6 @@ class ZillowScraper:
 
                 # Get Beds & Bathrooms
                 description = secondary_data.get('description', ', ,').split(',')
-                bedrooms = re.sub("[^0-9]", "", description[0])
-                bathrooms = re.sub("[^0-9]", "", description[1])
-
-                # Avoid Errors on missing elements
-                if secondary_data.get('offers'):
-                    price = secondary_data['offers'].get('price', np.nan)
-                else:
-                    price = np.nan
 
                 # Fill List
                 self.result_list.append({
@@ -177,9 +174,9 @@ class ZillowScraper:
                     'url': listing_url,
                     'address': main_data['name'],
                     'area': main_data['floorSize']['value'],
-                    'price': price,
-                    'bedrooms': bedrooms,
-                    'bathrooms': bathrooms,
+                    'price': secondary_data['offers'].get('price', np.nan) if secondary_data.get('offers') else np.nan,
+                    'bedrooms': re.sub("[^0-9]", "", description[0]),
+                    'bathrooms': re.sub("[^0-9]", "", description[1]),
                     'on_zillow': on_zillow,
                     'listed_by': by,
                     'ad_type': ad_type
@@ -222,7 +219,7 @@ class ZillowScraper:
 
     def run(self):
         while self.NextPage and self.is_valid and self.current_page <= ifnull(self.max_page, 99999):
-            for listing, listed_by in self.generate_urls():                 # iterate on each url
+            for listing, listed_by in self.generate_urls():  # iterate on each url
                 self.parse_listing(listing_url=listing, by=listed_by)  # Scrape Details
 
             self.current_page += 1
@@ -252,5 +249,5 @@ if __name__ == '__main__':
     NewYork = ZillowScraper(city='new-york-ny')
     NewYork.run()
 
-    Florida = ZillowScraper(city='FL')
+    Florida = ZillowScraper(city='fl')
     Florida.run()
