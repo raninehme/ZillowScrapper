@@ -1,0 +1,132 @@
+===================================================================================ATTEMPTING TO SCRAPE TEST_INVALID====================================================================================
+Scraping Page 1...................................Error 404 - Page Not Found.
+====================================================================================ATTEMPTING TO SCRAPE NEW-YORK-NY====================================================================================
+Scraping Page 1...................................Done!
+Scraping Page 2...................................Done!
+Scraping Page 3...................................Done!
+Scraping Page 4...................................Done!
+Scraping Page 5...................................Done!
+Scraping Page 6...................................Done!
+Scraping Page 7...................................Done!
+Scraping Page 8...................................Done!
+Scraping Page 9...................................Done!
+Scraping Page 10..................................Done!
+Scraping Page 11..................................Done!
+Scraping Page 12..................................Done!
+Scraping Page 13..................................Done!
+Scraping Page 14..................................Done!
+Scraping Page 15..................................Done!
+Scraping Page 16..................................Done!
+Scraping Page 17..................................Done!
+Scraping Page 18..................................Done!
+Scraping Page 19..................................Done!
+Scraping Page 20..................................Done!
+Scraping Page 21..................................Done!
+     page                                                                                             url                                         address   area    price bedrooms bathrooms   on_zillow                       listed_by   ad_type
+0       1       https://www.zillow.com/homedetails/111-Fulton-St-APT-507-New-York-NY-10038/97529695_zpid/       111 Fulton St Apt 507, New York, NY 10038    713   825000                  1   3 minutes                         Compass  For sale
+1       1         https://www.zillow.com/homedetails/474-W-238th-St-APT-3C-Bronx-NY-10463/244431440_zpid/          474 W 238th St Apt 3c, Bronx, NY 10463  1,200   550000        2         2   3 minutes                         Compass  For sale
+2       1  https://www.zillow.com/homedetails/100-Riverside-Blvd-APT-24A-New-York-NY-10069/89332933_zpid/  100 Riverside Blvd Apt 24a, New York, NY 10069  1,156  1595000        2         2   3 minutes     Kardonsky Real Estate, Inc.  For sale
+3       1   https://www.zillow.com/homedetails/225-20-Manor-Rd-1-Queens-Village-NY-11427/2075146837_zpid/    225-20 Manor Rd #1, Queens Village, NY 11427   None   310000        2         1   3 minutes             SpaceMax Realty Inc  For sale
+4       1         https://www.zillow.com/homedetails/61-15-98th-St-4A-Rego-Park-NY-11374/2075146888_zpid/          61-15 98th St #4a, Rego Park, NY 11374   None   225000                  1  14 minutes  Superior Services Realty L L C  For sale
+..    ...                                                                                             ...                                             ...    ...      ...      ...       ...         ...                             ...       ...
+795    20      https://www.zillow.com/homedetails/2195-E-22nd-St-APT-1F-Brooklyn-NY-11229/123110930_zpid/       2195 E 22nd St Apt 1f, Brooklyn, NY 11229  1,250   499000        2         1      5 days       Century 21 American Homes  For sale
+796    20        https://www.zillow.com/homedetails/250-E-54th-St-APT-9C-New-York-NY-10022/31530721_zpid/        250 E 54th St Apt 9c, New York, NY 10022    878  1099000        1         2      5 days                        SERHANT.  For sale
+797    20         https://www.zillow.com/homedetails/824-E-9th-St-APT-3A-Brooklyn-NY-11230/79717488_zpid/         824 E 9th St Apt 3a, Brooklyn, NY 11230    800   288000        1         1      5 days          Mill Realty Group Inc.  For sale
+798    20              https://www.zillow.com/homedetails/3605-Canal-Ave-Brooklyn-NY-11224/30732406_zpid/              3605 Canal Ave, Brooklyn, NY 11224  1,520   585000        3         2      5 days             Century 21 Am Homes  For sale
+799    20        https://www.zillow.com/homedetails/411-W-44th-St-APT-13-New-York-NY-10036/72519599_zpid/        411 W 44th St Apt 13, New York, NY 10036    650   695000        2         1      5 days            Brown Harris Stevens  For sale
+
+[800 rows x 10 columns]
+
+
+For sale             781
+New construction       7
+For sale by owner      7
+Lot/land               3
+[[Coming soon]]        2
+Name: ad_type, dtype: int64
+
+
+Compass                           108
+Douglas Elliman                    68
+Corcoran                           56
+Brown Harris Stevens               44
+Sotheby's International Realty     14
+                                 ... 
+eXp Realty BKNY                     1
+Julia B Fee Sothebys Int. Rlty      1
+Triumph Property Group              1
+Re/Max Edge                         1
+Caravaggio Loria, LREB              1
+Name: listed_by, Length: 307, dtype: int64
+
+Total Number of Properties = 800
+Total Average Price = 1462806.94375
+Average Price per sqft = 2620.6321256707984
+=====================================================================================SCRAPING NEW-YORK-NY FINISHED======================================================================================
+
+========================================================================================ATTEMPTING TO SCRAPE FL=========================================================================================
+Scraping Page 1...................................Done!
+Scraping Page 2...................................Done!
+Scraping Page 3...................................Done!
+Scraping Page 4...................................Done!
+Scraping Page 5...................................Done!
+Scraping Page 6...................................Done!
+Scraping Page 7...................................Done!
+Scraping Page 8...................................Done!
+Scraping Page 9...................................Done!
+Scraping Page 10..................................Done!
+Scraping Page 11..................................Done!
+Scraping Page 12..................................Done!
+Scraping Page 13..................................Done!
+Scraping Page 14..................................Done!
+Scraping Page 15..................................Done!
+Scraping Page 16..................................Done!
+Scraping Page 17..................................Done!
+Scraping Page 18..................................Done!
+Scraping Page 19..................................Done!
+Scraping Page 20..................................Done!
+Scraping Page 21..................................Done!
+     page                                                                                        url                                  address   area     price bedrooms bathrooms   on_zillow                                     listed_by           ad_type
+0       1          https://www.zillow.com/homedetails/711-Dome-Ave-Avon-Park-FL-33825/45127957_zpid/        711 Dome Ave, Avon Park, FL 33825  1,350  159900.0        3         2   2 minutes                                                        For sale
+1       1    https://www.zillow.com/homedetails/413-Peregrine-Dr-Indialantic-FL-32903/43473297_zpid/  413 Peregrine Dr, Indialantic, FL 32903  2,477  615000.0        4         3   2 minutes                                                        For sale
+2       1    https://www.zillow.com/homedetails/322-Canal-Rd-A-1-Edgewater-FL-32132/2077835600_zpid/   322 Canal Rd #a-1, Edgewater, FL 32132    995  120000.0        2         2   6 minutes  Downtown Realty & Investments, Edward Heaphy          For sale
+3       1        https://www.zillow.com/homedetails/6795-Beaudry-Ln-Milton-FL-32570/2075146819_zpid/        6795 Beaudry Ln, Milton, FL 32570  2,205  358278.0        4         3   9 minutes                            Flynn Built Realty  New construction
+4       1    https://www.zillow.com/homedetails/11154-Model-Cir-W-Boca-Raton-FL-33428/46510885_zpid/  11154 Model Cir W, Boca Raton, FL 33428  1,336  295000.0        3         2  15 minutes                     Real Estate Authority LLC          For sale
+..    ...                                                                                        ...                                      ...    ...       ...      ...       ...         ...                                           ...               ...
+795    20  https://www.zillow.com/homedetails/525-19th-Ter-Fort-Lauderdale-FL-33312/2075667879_zpid/  525 19th Ter, Fort Lauderdale, FL 33312   None  378990.0        3         3    22 hours                             Lennar Realty Inc          For sale
+796    20    https://www.zillow.com/homedetails/28704-133rd-Ct-9-Homestead-FL-33033/2076641082_zpid/   28704 133rd Ct #9, Homestead, FL 33033   None  256990.0        3         3    22 hours                             Lennar Realty Inc          For sale
+797    20    https://www.zillow.com/homedetails/6455-NW-103rd-Pl-109-Miami-FL-33178/2076641083_zpid/   6455 NW 103rd Pl #109, Miami, FL 33178   None  345990.0        3         3    22 hours                             Lennar Realty Inc          For sale
+798    20    https://www.zillow.com/homedetails/6425-NW-103rd-Pl-301-Miami-FL-33178/2077201462_zpid/   6425 NW 103rd Pl #301, Miami, FL 33178   None  319990.0        3         2    22 hours                             Lennar Realty Inc  New construction
+799    20     https://www.zillow.com/homedetails/5410-SW-138th-Ave-0-Miami-FL-33175/2085287076_zpid/    5410 SW 138th Ave #0, Miami, FL 33175  1,061  230000.0        3         2    22 hours                  Realty World Executive Homes          For sale
+
+[800 rows x 10 columns]
+
+
+For sale            645
+New construction     76
+Lot/land             65
+Contingent            8
+[[Coming soon]]       6
+Name: ad_type, dtype: int64
+
+
+                                                        186
+Southern Homes                                           32
+Lennar Realty Inc                                        13
+The Keyes Company                                        11
+Coldwell Banker Realty                                   11
+                                                       ... 
+Starwood Properties                                       1
+The Property Group 850 Inc                                1
+Keller Williams Elite Realty, Julie Digby                 1
+Schwab Real Estate Sales & Inv, Lynette Marie Schwab      1
+Dreams Realty Group LLC                                   1
+Name: listed_by, Length: 408, dtype: int64
+
+Total Number of Properties = 800
+Total Average Price = 485848.93434343435
+Average Price per sqft = 246.73073417583674
+==========================================================================================SCRAPING FL FINISHED==========================================================================================
+
+
+Process finished with exit code 0
